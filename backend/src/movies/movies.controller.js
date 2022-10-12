@@ -4,13 +4,26 @@ const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
 
 
 //returns list where is_showing is true
-async function list(req, res) {
+/*async function list(req, res) {
 if (req.query) { 
   req.query.is_showing === "true" && res.json({ data: await service.listMoviesCurrentlyShowing() 
                                               }); 
+
 } res.json({ data: await service.list() 
            });
 }
+*/
+
+
+async function list(req, res) {
+  if (req.query) { 
+    req.query.is_showing === "true" }
+    
+    res.json({ data: await service.listMoviesCurrentlyShowing() 
+                                                }); 
+  
+
+  }
 
 async function movieExists(req, res, next) {
     const { movieId } = req.params;
