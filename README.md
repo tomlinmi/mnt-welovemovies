@@ -28,3 +28,5 @@ To run the tests, you can run the following command:
 
 ## Database
 The database for this project is available on Postgres.  It is connected to DBeaver to view the tables and migrated data. Database URL included in the knexfile.js.
+
+Note: in a a real project, DB and Backend environment variable info would not be public.
